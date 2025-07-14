@@ -1,0 +1,70 @@
+#rootContainer {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  position: relative;
+}
+
+.containerGrids1,
+.containerGrids2,
+.containerGrids3,
+.containerGrids4 {
+  border: 1px solid gray;
+  position: absolute;
+}
+
+.containerGrids1,
+.containerGrids2 {
+  width: 100%;
+}
+
+.containerGrids3,
+.containerGrids4 {
+  width: 0%;
+  height: 100%;
+}
+
+.containerGrids1 {
+  top: 5rem;
+}
+
+.containerGrids2 {
+  bottom: 5rem;
+}
+
+.containerGrids3 {
+  left: 5rem;
+}
+
+.containerGrids4 {
+  right: 5rem;
+}
+
+.pokeballLogo1,
+.pokeballLogo2,
+.pokeballLogo3,
+.pokeballLogo4 {
+  position: absolute;
+  width: 3.5rem;
+}
+
+.pokeballLogo1 {
+  top: 1rem;
+  left: 1rem;
+}
+
+.pokeballLogo2 {
+  top: 1rem;
+  right: 1rem;
+}
+
+.pokeballLogo3 {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.pokeballLogo4 {
+  bottom: 1rem;
+  right: 1rem;
+}
