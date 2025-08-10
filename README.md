@@ -1,12 +1,8 @@
-# React + Vite
+# Infinite Scroll
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Implementation:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Make the fetch request to the api and paginate / limit the number of data fetched per page (like fetch 10 datas for first page and so on).
+- Call the fetch method in useEffect with pages being the dependency.
+- Create a function to handle the scrolling i.e. when the user has reached the bottom of the viewport it should show a loader which indicates that more data is being fetched and hence after sometime more data should be fetched for next page.
+- This function should also be called inside a useEffect with loading and hasMore as dependencies.
