@@ -1,6 +1,8 @@
 #searchContainer {
   width: 50%;
-  margin: 6rem auto;
+  margin: 0 auto;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
   border-radius: 0.5rem;
   border: none;
   box-shadow: none;

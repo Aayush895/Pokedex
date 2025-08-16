@@ -1,3 +1,24 @@
 #dexContainer {
   color: white;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 72vh;
+}
+
+#dexContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#cardContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 30%;
+  border: 1px solid;
+  margin: 1rem 1.75rem;
 }

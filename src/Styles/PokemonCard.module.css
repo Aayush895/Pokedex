@@ -1,0 +1,18 @@
+#cardContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+#cardContainer > h1 {
+  text-align: left;
+}
+
+#cardContainer > img {
+  width: 50%;
+  border: 1px solid;
+}
