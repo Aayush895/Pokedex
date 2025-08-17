@@ -26,7 +26,6 @@ export async function fetchPokedexData(URL) {
     }
   }
 
-  console.log('LOGGING POKEMON INFORMATION: ', response)
   return [response, pokemon]
 }
 

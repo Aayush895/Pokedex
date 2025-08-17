@@ -51,7 +51,7 @@ function PokedexContainer() {
     <>
       <div id={styles.dexContainer}>
         {isLoading ? (
-          <img src={pokeballLoader} alt="loader-gif" />
+          <img src={pokeballLoader} alt="loader-gif" id={styles.loader}/>
         ) : (
           pokemon.length > 0 &&
           pokemon.map((pokemon) => {

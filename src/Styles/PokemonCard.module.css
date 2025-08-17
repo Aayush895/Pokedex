@@ -14,5 +14,18 @@
 
 #cardContainer > img {
   width: 50%;
-  border: 1px solid;
+}
+
+#typeContainer {
+  color: white;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+#type {
+  margin: 0 1.5rem;
+  padding: 1rem 0;
 }
