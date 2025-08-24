@@ -36,7 +36,7 @@ function Container() {
         />
 
         <Search />
-        <PokedexContainer />
+        <PokedexContainer /> 
       </div>
     </>
   )

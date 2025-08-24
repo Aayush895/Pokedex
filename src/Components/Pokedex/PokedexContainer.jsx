@@ -3,6 +3,7 @@ import PokemonCard from './PokemonCard'
 import { fetchPokedexData } from '../../utils/fetchPokedexData'
 import pokeballLoader from '/images/pokeball-loader.gif'
 import styles from '../../Styles/PokedexContainer.module.css'
+import { Link } from 'react-router'
 
 function PokedexContainer() {
   const [btnClicked, setBtnClicked] = useState({
@@ -47,20 +48,26 @@ function PokedexContainer() {
 
     getData(URL)
   }, [btnClicked, setBtnClicked])
+  
   return (
     <>
       <div id={styles.dexContainer}>
         {isLoading ? (
-          <img src={pokeballLoader} alt="loader-gif" id={styles.loader}/>
+          <img src={pokeballLoader} alt="loader-gif" id={styles.loader} />
         ) : (
           pokemon.length > 0 &&
           pokemon.map((pokemon) => {
             return (
               <div key={pokemon?.information?.id} id={styles.cardContainer}>
-                <PokemonCard
-                  name={pokemon?.name}
-                  information={pokemon?.information}
-                />
+                <Link
+                  to={`/pokemon/${pokemon?.information?.id}`}
+                  className={styles.cardLink}
+                >
+                  <PokemonCard
+                    name={pokemon?.name}
+                    information={pokemon?.information}
+                  />
+                </Link>
               </div>
             )
           })
