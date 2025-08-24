@@ -2,10 +2,10 @@ import { useParams } from 'react-router'
 import { usePokemonDetails } from '../hooks/usePokemonDetails'
 import styles from '../../Styles/PokemonDetails.module.css'
 
-function PokemonDetails() {
+function PokemonDetails({pokemonName = ''}) {
   const { id } = useParams()
   const pokemonDetails = usePokemonDetails(
-    `https://pokeapi.co/api/v2/pokemon/${id}`
+    `https://pokeapi.co/api/v2/pokemon/${pokemonName ? pokemonName : id}`
   )
 
   return (

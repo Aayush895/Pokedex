@@ -1,9 +1,13 @@
-import styles from '../Styles/Container.module.css'
+import { useState } from 'react'
 import Navbar from './Nav/Navbar'
 import Search from './Nav/Search'
 import PokedexContainer from './Pokedex/PokedexContainer'
+import PokemonDetails from './Pokedex/PokemonDetails'
+import styles from '../Styles/Container.module.css'
 
 function Container() {
+  const [searchTerm, setSearchTerm] = useState('')
+  
   return (
     <>
       <div id={styles.rootContainer}>
@@ -35,8 +39,8 @@ function Container() {
           className={styles.pokeballLogo4}
         />
 
-        <Search />
-        <PokedexContainer /> 
+        <Search setSearchTerm={setSearchTerm} />
+        {!searchTerm ? <PokedexContainer /> : <PokemonDetails key={searchTerm} pokemonName={searchTerm}/>}
       </div>
     </>
   )
